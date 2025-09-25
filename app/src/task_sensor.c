@@ -50,7 +50,7 @@
 #include "task_system_attribute.h"
 #include "task_system_interface.h"
 
-/********************** macros and definitions *******************************/
+	/********************** macros and definitions *******************************/
 #define G_TASK_SEN_CNT_INIT			0ul
 #define G_TASK_SEN_TICK_CNT_INI		0ul
 
@@ -60,13 +60,19 @@
 
 /********************** internal data declaration ****************************/
 const task_sensor_cfg_t task_sensor_cfg_list[] = {
-	{ID_BTN_A,  BTN_A_PORT,  BTN_A_PIN,  BTN_A_PRESSED, DEL_BTN_XX_MAX,
-	 EV_SYS_IDLE,  EV_SYS_LOOP_DET}
+	{ID_BTN_A,  BTN_B_PORT,  BTN_B_PIN,  BTN_B_PRESSED, DEL_BTN_XX_MAX,
+	 EV_SYS_IDLE,  EV_SYS_LOOP_DET},
+	 {ID_BTN_C,  BTN_C_PORT,  BTN_C_PIN,  BTN_C_PRESSED, DEL_BTN_XX_MAX,
+	 EV_SYS_IDLE,  EV_SYS_LOOP_DET},
+	 {ID_BTN_D,  BTN_D_PORT,  BTN_D_PIN,  BTN_D_PRESSED, DEL_BTN_XX_MAX,
+		 EV_SYS_IDLE,  EV_SYS_LOOP_DET},
 };
 
 #define SENSOR_CFG_QTY	(sizeof(task_sensor_cfg_list)/sizeof(task_sensor_cfg_t))
 
 task_sensor_dta_t task_sensor_dta_list[] = {
+	{DEL_BTN_XX_MIN, ST_BTN_XX_UP, EV_BTN_XX_UP},
+	{DEL_BTN_XX_MIN, ST_BTN_XX_UP, EV_BTN_XX_UP},
 	{DEL_BTN_XX_MIN, ST_BTN_XX_UP, EV_BTN_XX_UP}
 };
 
