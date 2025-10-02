@@ -56,12 +56,12 @@
 
 #define DEL_BTN_XX_MIN				0ul
 #define DEL_BTN_XX_MED				25ul
-#define DEL_BTN_XX_MAX				500ul
+#define DEL_BTN_XX_MAX				50ul
 
 /********************** internal data declaration ****************************/
 const task_sensor_cfg_t task_sensor_cfg_list[] = {
-		//{ID_BTN_A,  BTN_A_PORT,  BTN_A_PIN,  BTN_A_PRESSED, DEL_BTN_XX_MAX,
-			// EV_SYS_IDLE,  EV_SYS_LOOP_DET},
+		{ID_BTN_A,  BTN_A_PORT,  BTN_A_PIN,  BTN_A_PRESSED, DEL_BTN_XX_MAX,
+			 EV_SYS_IDLE,  EV_SYS_LOOP_DET},
 	{ID_BTN_B,  BTN_B_PORT,  BTN_B_PIN,  BTN_B_PRESSED, DEL_BTN_XX_MAX,
 	 EV_SYS_IDLE,  EV_SYS_LOOP_DET},
 	 {ID_BTN_C,  BTN_C_PORT,  BTN_C_PIN,  BTN_C_PRESSED, DEL_BTN_XX_MAX,
@@ -73,10 +73,10 @@ const task_sensor_cfg_t task_sensor_cfg_list[] = {
 #define SENSOR_CFG_QTY	(sizeof(task_sensor_cfg_list)/sizeof(task_sensor_cfg_t))
 
 task_sensor_dta_t task_sensor_dta_list[] = {
-	//{DEL_BTN_XX_MIN, ST_BTN_XX_UP, EV_BTN_XX_UP},
 	{DEL_BTN_XX_MIN, ST_BTN_XX_UP, EV_BTN_XX_UP},
-	{DEL_BTN_XX_MAX, ST_BTN_XX_UP, EV_BTN_XX_UP},
-	{DEL_BTN_XX_MAX, ST_BTN_XX_UP, EV_BTN_XX_UP}
+	{DEL_BTN_XX_MIN, ST_BTN_XX_UP, EV_BTN_XX_UP},
+	{DEL_BTN_XX_MIN, ST_BTN_XX_UP, EV_BTN_XX_UP},
+	{DEL_BTN_XX_MIN, ST_BTN_XX_UP, EV_BTN_XX_UP}
 };
 
 #define SENSOR_DTA_QTY	(sizeof(task_sensor_dta_list)/sizeof(task_sensor_dta_t))
