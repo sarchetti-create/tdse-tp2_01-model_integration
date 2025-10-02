@@ -231,13 +231,13 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pins : BOTON_C_Pin BOTON_D_Pin */
   GPIO_InitStruct.Pin = BOTON_C_Pin|BOTON_D_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pin : BOTON_B_Pin */
   GPIO_InitStruct.Pin = BOTON_B_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(BOTON_B_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
